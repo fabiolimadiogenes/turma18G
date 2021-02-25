@@ -1,3 +1,4 @@
+package atividadeSequencial;
 import java.util.Scanner;
 
 public class atividade4 {

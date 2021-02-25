@@ -1,6 +1,7 @@
+package atividadeSequencial;
 import java.util.Scanner;
 
-public class atividade01 {
+public class atividade1 {
 	public static void main(String[] args) {
 		
 		Scanner ler = new Scanner(System.in);
