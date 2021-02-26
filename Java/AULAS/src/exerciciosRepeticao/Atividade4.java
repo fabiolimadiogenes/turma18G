@@ -34,14 +34,14 @@ public class Atividade4 {
 		int pessoasNervosasMais40 = 0;
 		int pessoasNervosasMenos18 = 0;
 		
-		while(pessoas < 2){
+		while(pessoas < 150){
 			
 			/*
 			 * (1-feminino / 2-masculino / 3-Outros), e as opções
 (1 calma; 2,  nervosa e 3, agressiva)
 			 */
 			
-			System.out.println("Informe a idadee: ");
+			System.out.println("Informe a idade: ");
 			idade = ler.nextInt();
 			System.out.println("Informe o genero: [1 Feminino] [2 Masculino] [3 outros] : ");
 			genero = ler.nextInt();
