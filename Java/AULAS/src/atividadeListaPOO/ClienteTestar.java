@@ -1,4 +1,4 @@
-package atividadeClientePOO;
+package atividadeListaPOO;
 
 import java.util.Scanner;
 
