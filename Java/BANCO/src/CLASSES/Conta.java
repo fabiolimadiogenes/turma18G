@@ -8,6 +8,7 @@ public class Conta {
     private double saldo;
     private boolean ativa;
 
+        	
     //CONSTRUTOR
     public Conta(int numero, String cpf) {
 
