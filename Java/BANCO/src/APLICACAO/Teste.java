@@ -10,7 +10,8 @@ public class Teste {
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);
-        Conta CE = new Conta(345);
+        Conta conta = new Conta(365);
+        Conta CE = new ContaEmpresa(369,10000);
        
         double valor;
         char opcao;
@@ -29,15 +30,30 @@ public class Teste {
         System.out.print("\n|                 4 -> [ Conta Empresa    ]                     |");
         System.out.print("\n|                 5 -> [ Conta Estudantil ]                     |");
         System.out.print("\n|                 6 -> [ Sair             ]                     |");
-        System.out.print("\n                    [ Digite a opção desejada ] -> ");
+        System.out.print("\n                   [ Digite a opção desejada ] -> ");
         
         escolhaConta = leia.nextInt();
         System.out.println();
         
+        //contaPoupanca
+        if (escolhaConta == 1) 
+        {
+        	
+        }
         
+        //contaCorrente
+        if (escolhaConta == 2) 
+        {
+        	
+        }
         
-         //contaEmpresa
-         
+        //contaEspecial
+        if (escolhaConta == 3) 
+        {
+        	
+        }
+                        
+        //contaEmpresa
         if(escolhaConta == 4)
         {
         	
@@ -60,6 +76,7 @@ public class Teste {
 						}
 						else if(opcao == 'C')
 						{
+							//CE.credito(valor);
 							CE.credito(valor);
 							System.out.printf("\nCrédito: %.2f",movimento[contador]);
 						}else 
@@ -82,12 +99,13 @@ public class Teste {
 							opcao = leia.next().toUpperCase().charAt(0);
 								if(opcao == 'S')
 								{
+									System.out.println(conta.getSaldo());
 									
+									System.out.println(CE.getSaldo());
 								}
 								else if(opcao == 'N')
 								{
-									CE.credito(valor);
-									System.out.printf("\nCrédito: %.2f",movimento[contador]);
+									break;
 								}else 
 								{
 									System.out.println("\nOpção invalida!");
@@ -99,10 +117,24 @@ public class Teste {
 						}
 				    System.out.print("Deseja continuar fazendo as transações? [S-> SIM] [N-> NÃO] -> "); 
 				    sair = leia.next().toUpperCase().charAt(0);
-				    System.out.println(contador);
+				    
 					
-        	}while(sair != 'N' );     
+        	}while(sair == 'S' );     
         }
+        
+        //contaEstudantil
+        if (escolhaConta == 5) 
+        {
+        	
+        }
+        
+        //sair
+        if (escolhaConta == 6) 
+        {
+        	System.out.println("Obrigado por usar os nossos sistemas, o banco Horizonte agradece a preferência.");
+        }
+        
+        
         
         //escolhaConta = leia.nextInt();
 

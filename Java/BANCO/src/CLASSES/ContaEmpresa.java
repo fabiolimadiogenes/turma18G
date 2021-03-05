@@ -20,11 +20,32 @@ public class ContaEmpresa extends Conta {
 		
 	}
 	
-	public double setEmprestimo() {
+	public void setEmprestimo(double emprestimo) {
 			
-			return emprestimo;
+			this.emprestimo = emprestimo;
 			
 	}
+	
+	@Override
+	public double getSaldo() {
+        return saldo += + emprestimo;
+    }
+	
+	@Override
+	public void credito(double valor) {
+        this.saldo = this.saldo + valor;
+
+    }
+
+	@Override
+    public void debito(double valor)
+    {
+        if (this.saldo>=valor)
+        {
+            this.saldo = this.saldo - valor;
+        }
+
+    }
 
 	
 	
