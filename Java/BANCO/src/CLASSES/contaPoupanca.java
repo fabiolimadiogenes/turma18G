@@ -14,13 +14,21 @@ public class ContaPoupanca extends Conta{
     }
 
 
-    //Get Set - encapsulamento
-    public int getdataAniversarioConta() {
-        return dataAniversarioConta;
-    }
+    
+    
 
 
-    public void correcaoPoupanca(int dataAtual) {
+    public int getDataAniversarioConta() {
+		return dataAniversarioConta;
+	}
+
+
+	public void setDataAniversarioConta(int dataAniversarioConta) {
+		this.dataAniversarioConta = dataAniversarioConta;
+	}
+
+
+	public void correcaoPoupanca(int dataAtual) {
 
         if (dataAtual == this.dataAniversarioConta) {
             super.credito(super.getSaldo()*0.005);
@@ -28,6 +36,22 @@ public class ContaPoupanca extends Conta{
         }else {
             System.out.println("Não houve correção no valor da conta");
         }
+    }
+    
+    @Override
+    public void credito(double valor) {
+        this.saldo = this.saldo + valor;
+        super.saldo += valor;
+    }
+
+    @Override
+    public void debito(double valor)
+    {
+        if (this.saldo>=valor)
+        {
+            this.saldo = this.saldo - valor;
+        }
+
     }
 
 

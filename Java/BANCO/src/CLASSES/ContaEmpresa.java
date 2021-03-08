@@ -66,8 +66,8 @@ public class ContaEmpresa extends Conta {
 	}
 
 	
-	
-	public void credito() {
+	@Override
+	public void credito(double valor) {
 		System.out.println();
 		System.out.println("                    [CRÉDITO]                    ");
 		System.out.print("Digite o valor da transação -> ");
@@ -79,7 +79,8 @@ public class ContaEmpresa extends Conta {
 
     }
 
-	public void debito()
+	@Override
+	public void debito(double valor)
     {
 		if(super.saldo == 0) 
 		{
@@ -96,8 +97,25 @@ public class ContaEmpresa extends Conta {
 	        }
     }
 
+	@Override
+	public int getNumero() {
+	        return numero;
+	    }
+
+	@Override
+    public void setNumero(int numero) {
+        this.numero = numero;
+	    }
+
+	@Override
+    public String getCpf() {
+        return cpf;
+	    }
 	
-	
+	@Override
+	public void setCpf(String cpf) {
+        this.cpf = cpf;
+	    }
 	
 	
 	
